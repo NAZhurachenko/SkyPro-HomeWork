@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+body {
+    font-family: "Montserrat", sans-serif;
+  }
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+.top {
+    background-color: #E1FF8F;
+    padding-top: 196px;
+    padding-bottom: 156px;
+    padding-left: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 48;
+}
+.top_content {
+    width: 800px;
+    text-align: left;
+}
+.title  {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 78px;
+    letter-spacing: 0px;
+}
+.subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    margin-top: 24px;
+}
+.top_button {
+    box-sizing: border-box;
+    border: 1px solid rgb(32, 32, 39);
+    border-radius: 60px;
+    background: rgb(32, 32, 39);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 141.69%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #FFF;
+    padding: 16px 28px 16px 28px;
+    margin-top: 48px;
+    width: 247px;
+}
+.top_button:hover {
+    border: 1px solid rgb(0, 0, 0);
+    background-color: #fff;
+    color: #000;
+}
+.line {
+    margin: 0;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: #BCEC30;
+    color: #202027;
+    display: inline-block;
+    padding: 10px;
+    transition: transform 10s linear;
+    font-size: 30px;
+    font-weight: 700;
+}
+.game {
+    background-color: #202027;
+    padding: 95px 120px;
+}
+.game_content {
+    color: #FFF;
+    margin-bottom: 72px;
+}
+.card {
+    border-radius: 30px;
+    background: rgb(255, 255, 255);
+    width: 378px;
+}
+.menu:hover {
+    transform: scale(1.1);
+}
+.game_card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 0px;
+}
+.card_content {
+    padding: 34px 32px;
+}
+.card_number {
+    border-radius: 52.58px;
+    background: rgb(247, 247, 247);
+    color: rgb(32, 32, 39);
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    width: 108px;
+    height: 36px;
+}
+.card_title {
+    color: rgb(32, 32, 39);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+}
+.big {
+    width: 1200px;
+
+
+    display: flex;
+    height: 500px;
+}
+.big_content {
+    padding: 48px;
+    background: rgb(255, 255, 255);
+    border-radius: 30px;
+    box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
+}
+.big_img {
+    width: 600px;
+}
+footer {
+    background: rgb(189, 237, 53);
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    padding: 60px;
+}
+
+

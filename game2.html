@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простая арифметика</title>
+</head>
+<body>
+    <h1>Простая арифметика</h1>
+    <p>Попробуй решить простые арифметические задачи.</p>
+    <div id="question"></div>
+    <input id="answer" placeholder="Ваш ответ">
+    <button id="submit">Проверить ответ</button>
+    <div id="result"></div>    
+
+    <script>
+        let correctAnswer;
+        function generateQuestion() {
+            const num1 = Math.floor(Math.random() * 10) + 1;
+            const num2 = Math.floor(Math.random() * 10) + 1;
+            const operations = ['+', '-', '*', '/'];
+            const operation = operations[Math.floor(Math.random() * operations.length)];
+
+            switch (operation) {
+                case '+':
+                    correctAnswer = num1 + num2;
+                    return `${num1} + ${num2}`;
+                case '-':
+                    correctAnswer = num1 - num2;
+                    return `${num1} - ${num2}`;
+                case '*':
+                    correctAnswer = num1 * num2;
+                    return `${num1} * ${num2}`;
+                case '/':
+                    const divisibleNum1 = num1 * num2;
+                    correctAnswer = divisibleNum1 / num2;
+                    return `${divisibleNum1} / ${num2}`;
+            }
+        }
+
+        function checkAnswer() {
+            const userAnswer = parseInt(document.getElementById('answer').value);
+            const resultDiv = document.getElementById('result');
+
+            if (userAnswer === correctAnswer) {
+                resultDiv.textContent = 'Верно!';
+            } else {
+                resultDiv.textContent = `Ошибка! Правильный ответ: ${correctAnswer}`;
+            }
+
+            document.getElementById('answer').value = '';
+            generateNewQuestion();
+        }
+
+        function generateNewQuestion() {
+            const questionDiv = document.getElementById('question');
+            questionDiv.textContent = generateQuestion();
+        }
+
+        document.getElementById('submit').addEventListener('click', checkAnswer);
+
+        generateNewQuestion();
+    </script>
+</body>
+</html>
